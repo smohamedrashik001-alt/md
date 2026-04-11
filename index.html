@@ -2,16 +2,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Mohamed Rashik | Portfolio</title>
+<title> Sowmya | Portfolio</title>
 
 <style>
 body {
   margin:0;
-  font-family: Arial;
-  background:#0f172a;
+  font-family: 'Segoe UI';
+  background: linear-gradient(to right, #0f172a, #1e293b);
   color:white;
 }
 
+/* NAVBAR */
 nav {
   display:flex;
   justify-content:space-between;
@@ -20,11 +21,12 @@ nav {
 }
 
 nav a {
-  color:cyan;
+  color:#ff69b4;
   margin-left:15px;
   text-decoration:none;
 }
 
+/* HERO */
 .hero {
   text-align:center;
   padding:60px;
@@ -33,36 +35,56 @@ nav a {
 .hero img {
   width:130px;
   border-radius:50%;
-  border:3px solid cyan;
+  border:3px solid #ff69b4;
 }
 
+.hero h1 span {
+  color:#ff69b4;
+}
+
+/* SECTION */
 .section {
   padding:40px;
   text-align:center;
 }
 
-.btn {
-  background:cyan;
-  color:black;
-  padding:10px 15px;
-  border:none;
-  border-radius:5px;
-  margin-top:10px;
-  cursor:pointer;
-}
-
-input, textarea {
-  padding:10px;
-  margin:10px;
-  width:250px;
-}
-
+/* CARD */
 .card {
   background:#1e293b;
   padding:20px;
   margin:10px;
   display:inline-block;
   border-radius:10px;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:scale(1.05);
+  background:#334155;
+}
+
+/* BUTTON */
+.btn {
+  background:#ff69b4;
+  color:black;
+  padding:10px 15px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+/* INPUT */
+input, textarea {
+  padding:10px;
+  margin:10px;
+  width:250px;
+}
+
+/* FOOTER */
+footer {
+  background:black;
+  padding:10px;
+  text-align:center;
 }
 </style>
 </head>
@@ -71,7 +93,7 @@ input, textarea {
 
 <!-- NAVBAR -->
 <nav>
-  <h3>Rashik</h3>
+  <h3>Sowmya</h3>
   <div>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -82,18 +104,17 @@ input, textarea {
 
 <!-- HERO -->
 <div class="hero">
-  <img src="https://drive.google.com/file/d/1xk5rHqdU5BfPIwDL0UJHj0lX8O2ULh04/view?usp=drivesdk.jpg"> <!-- 👈 un photo file name -->
-  <h1>Hi I'm Mohamed Rashik</h1>
-  <p>Web Developer 💻</p>
+  <img src="https://drive.google.com/file/d/1xk5rHqdU5BfPIwDL0UJHj0lX8O2ULh04/view?usp=drivesdkphoto.jpg">
+  <h1>Hi I'm <span>Sowmya</span></h1>
+  <p>Full Stock</p>
 
-  <!-- RESUME DOWNLOAD -->
-  <a href="https://drive.google.com/file/d/1trPkJtbGoKHoXItIlAoJIdQmoDu3CB1X/view?usp=drivesdk.pdf" download class="btn">Download Resume</a>
+  <a href="https://drive.google.com/file/d/13SfPr0sa0DZ2dfiRjjnG8KYi3onSE5zw/view?usp=drivesdk.pdf" download class="btn">Download Resume</a>
 </div>
 
 <!-- ABOUT -->
 <div class="section" id="about">
   <h2>About Me</h2>
-  <p>ECE student passionate about Web Development and AI projects.</p>
+  <p>Creative developer passionate about designing modern websites.</p>
 </div>
 
 <!-- SKILLS -->
@@ -102,31 +123,36 @@ input, textarea {
   <div class="card">HTML</div>
   <div class="card">CSS</div>
   <div class="card">JavaScript</div>
+  <div class="card">python</div>
 </div>
 
 <!-- PROJECTS -->
 <div class="section" id="projects">
   <h2>Projects</h2>
-  <div class="card">AI-Based Traffic Signal Control System using image processing</div>
+  <div class="card">Digital sale deed automation for revenue department</div>
 </div>
 
 <!-- CONTACT -->
-<div class="section" id="8754281925">
-  <h2>8754281925</h2>
+<div class="section" id="contact">
+  <h2>Contact Me</h2>
+  <p>phone:8807687912</p>
 
-  <input type="text" id="Name" placeholder="Your Name"><br>
-  <textarea id="message" placeholder="good"></textarea><br>
+  <input type="text" id="name" placeholder="Your Name"><br>
+  <textarea id="msg" placeholder="Your Message"></textarea><br>
 
-  <!-- EMAIL SEND BUTTON -->
-  <button class="btn" onclick="rashikrashik316()">Send Mail</button>
+  <button class="btn" onclick="sendMail()">Send Mail</button>
 </div>
+
+<footer>
+  <p>© 2026 Somya</p>
+</footer>
 
 <script>
 function sendMail() {
-  let name = document.getElementById("rashik").value;
-  let msg = document.getElementById("message").value;
+  let name = document.getElementById("name").value;
+  let msg = document.getElementById("msg").value;
 
-  let mail = "mailto:rashikrashik316mail@gmail.com?subject=Portfolio Contact&body=Name: " 
+  let mail = "mailto:sowmyam757mail@gmail.com?subject=Contact Somya&body=Name: "
              + name + "%0A" + msg;
 
   window.location.href = mail;
@@ -135,6 +161,5 @@ function sendMail() {
 
 </body>
 </html>
-
 
 
