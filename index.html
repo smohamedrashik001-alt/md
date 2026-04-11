@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login Page</title>
+<title>Advanced Login</title>
 
 <style>
 body {
-    margin: 0;
+    margin:0;
     font-family: Arial;
     background: linear-gradient(to right, #141e30, #243b55);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:white;
 }
 
-.login-box {
+.box {
     background: rgba(255,255,255,0.1);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
 }
 
 input {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    width: 200px;
-    border: none;
-    border-radius: 5px;
+    display:block;
+    margin:10px auto;
+    padding:10px;
+    width:220px;
+    border:none;
+    border-radius:5px;
 }
 
 button {
-    padding: 10px;
-    width: 220px;
-    background: cyan;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding:10px;
+    width:240px;
+    background:cyan;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
 }
 
 button:hover {
-    background: white;
+    background:white;
+}
+
+.toggle {
+    cursor:pointer;
+    font-size:12px;
+    color:cyan;
 }
 
 </style>
@@ -49,11 +55,13 @@ button:hover {
 
 <body>
 
-<div class="login-box">
+<div class="box">
     <h2>Login 🔐</h2>
 
     <input type="text" id="user" placeholder="Username">
+    
     <input type="password" id="pass" placeholder="Password">
+    <span class="toggle" onclick="togglePass()">Show Password</span>
 
     <button onclick="login()">Login</button>
 
@@ -65,10 +73,23 @@ function login() {
     let user = document.getElementById("user").value;
     let pass = document.getElementById("pass").value;
 
-    if(user == "admin" && pass == "1234") {
-        document.getElementById("msg").innerText = "Login Success 🔥";
-    } else {
+    if(user === "" || pass === "") {
+        document.getElementById("msg").innerText = "Fill all fields ⚠️";
+    }
+    else if(user === "admin" && pass === "1234") {
+        window.location.href = "welcome.html";
+    }
+    else {
         document.getElementById("msg").innerText = "Invalid Login ❌";
+    }
+}
+
+function togglePass() {
+    let p = document.getElementById("pass");
+    if(p.type === "password") {
+        p.type = "text";
+    } else {
+        p.type = "password";
     }
 }
 </script>
