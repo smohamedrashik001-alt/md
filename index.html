@@ -1,88 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>web</title>
-        <style>
-            body{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: rgb(151, 149, 153);
-                color: rgb(9, 10, 10);
-                font-family: Arial, Helvetica, sans-serif;
-                text-align: center;
-            }
-            .skills div{
-                background-color: rgb(204, 141, 14);
-                color: aqua;
-                margin: 20px;
-                padding: 30px;
-                border-radius: 10px;
-            }
-            h1{
-                color: rgb(121, 120, 120);
-            }
-            button{
-                background-color: rgb(5, 5, 5);
-                color: white;
-                padding:10px;
-                border: 5cm;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>rashik</h1>
-        <p>qucik learner</p>
-        <div class="box">
-            <h2>about me</h2>
-            <p>html,css,js</p>
-        </div>
-
-        <div class="box"
-            <h2>my skills</h2>
-            <p>html,css,web</p>
-        </div>
-
-        <div class="box">
-            <h2>contact</h2>
-            <input type="text" placeholder="enter name"><br><br>
-            <input type="text" placeholder="my name is rashik"><br><br>
-            <button>send</button>
-        </div>
-        <div class="skills">
-        <div>html</div>
-        <div>css</div>
-        <div>js</div>
-        </div>
-         <script>
-            alert("hi rashik");
-         </script>
-         <button onclick="clickme">click</button>
-         <script>
-          function clickme(){
-                alert("button press pannita")
-            }
-         </script>
-         <input type="text"id="name">
-         <button onclick="show()">send</button>
-         <P id=""result"></P>
-       <input type="type" id="name" placeholder="i love you">
-       <button onclick="show()">send</button>
-       <p id="result"></p>
-       <script>
-         function show(){
-            let name=document.getElementbyld("name").value
-
-            if(name==""){
-                alert("name enter pannu da mapla");
-            }else{
-                document.getElementById("result").innertext="welcome"+ name+ " ";
-                
-            }
-            
-
+<head>
+    <title>Mohamed Rashik - Resume</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #0f172a;
+            color: white;
         }
-       </script>
+        header {
+            background: #1e293b;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        .card {
+            background: #1e293b;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        h2 {
+            color: cyan;
+        }
+        .btn {
+            background: cyan;
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
 
-    </body>
+<body>
+
+<header>
+    <h1>Mohamed Rashik</h1>
+    <p>ECE Student | Web Developer</p>
+    <a class="btn" href="#">Download Resume</a>
+</header>
+
+<section>
+    <div class="card">
+        <h2>About Me</h2>
+        <p>Passionate ECE student interested in Web Development and AI projects.</p>
+    </div>
+
+    <div class="card">
+        <h2>Skills</h2>
+        <p>HTML, CSS, JavaScript</p>
+        <p>Python Basics</p>
+    </div>
+
+    <div class="card">
+        <h2>Projects</h2>
+        <p>AI Traffic Signal Control System</p>
+        <p>Smart Toothbrush Sensor</p>
+    </div>
+
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Email: yourmail@gmail.com</p>
+        <p>Phone: 9876543210</p>
+    </div>
+</section>
+
+</body>
 </html>
