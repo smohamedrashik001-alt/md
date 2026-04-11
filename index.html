@@ -1,165 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title> Sowmya | Portfolio</title>
+<title>Login Page</title>
 
 <style>
 body {
-  margin:0;
-  font-family: 'Segoe UI';
-  background: linear-gradient(to right, #0f172a, #1e293b);
-  color:white;
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
 }
 
-/* NAVBAR */
-nav {
-  display:flex;
-  justify-content:space-between;
-  padding:15px 40px;
-  background:black;
+.login-box {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-nav a {
-  color:#ff69b4;
-  margin-left:15px;
-  text-decoration:none;
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
 }
 
-/* HERO */
-.hero {
-  text-align:center;
-  padding:60px;
+button {
+    padding: 10px;
+    width: 220px;
+    background: cyan;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.hero img {
-  width:130px;
-  border-radius:50%;
-  border:3px solid #ff69b4;
+button:hover {
+    background: white;
 }
 
-.hero h1 span {
-  color:#ff69b4;
-}
-
-/* SECTION */
-.section {
-  padding:40px;
-  text-align:center;
-}
-
-/* CARD */
-.card {
-  background:#1e293b;
-  padding:20px;
-  margin:10px;
-  display:inline-block;
-  border-radius:10px;
-  transition:0.3s;
-}
-
-.card:hover {
-  transform:scale(1.05);
-  background:#334155;
-}
-
-/* BUTTON */
-.btn {
-  background:#ff69b4;
-  color:black;
-  padding:10px 15px;
-  border:none;
-  border-radius:5px;
-  cursor:pointer;
-}
-
-/* INPUT */
-input, textarea {
-  padding:10px;
-  margin:10px;
-  width:250px;
-}
-
-/* FOOTER */
-footer {
-  background:black;
-  padding:10px;
-  text-align:center;
-}
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <h3>Sowmya</h3>
-  <div>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+<div class="login-box">
+    <h2>Login 🔐</h2>
 
-<!-- HERO -->
-<div class="hero">
-  <img src="https://drive.google.com/file/d/1xk5rHqdU5BfPIwDL0UJHj0lX8O2ULh04/view?usp=drivesdkphoto.jpg">
-  <h1>Hi I'm <span>Sowmya</span></h1>
-  <p>Full Stock</p>
+    <input type="text" id="user" placeholder="Username">
+    <input type="password" id="pass" placeholder="Password">
 
-  <a href="https://drive.google.com/file/d/13SfPr0sa0DZ2dfiRjjnG8KYi3onSE5zw/view?usp=drivesdk.pdf" download class="btn">Download Resume</a>
+    <button onclick="login()">Login</button>
+
+    <p id="msg"></p>
 </div>
-
-<!-- ABOUT -->
-<div class="section" id="about">
-  <h2>About Me</h2>
-  <p>Creative developer passionate about designing modern websites.</p>
-</div>
-
-<!-- SKILLS -->
-<div class="section" id="skills">
-  <h2>Skills</h2>
-  <div class="card">HTML</div>
-  <div class="card">CSS</div>
-  <div class="card">JavaScript</div>
-  <div class="card">python</div>
-</div>
-
-<!-- PROJECTS -->
-<div class="section" id="projects">
-  <h2>Projects</h2>
-  <div class="card">Digital sale deed automation for revenue department</div>
-</div>
-
-<!-- CONTACT -->
-<div class="section" id="contact">
-  <h2>Contact Me</h2>
-  <p>phone:8807687912</p>
-
-  <input type="text" id="name" placeholder="Your Name"><br>
-  <textarea id="msg" placeholder="Your Message"></textarea><br>
-
-  <button class="btn" onclick="sendMail()">Send Mail</button>
-</div>
-
-<footer>
-  <p>© 2026 Somya</p>
-</footer>
 
 <script>
-function sendMail() {
-  let name = document.getElementById("name").value;
-  let msg = document.getElementById("msg").value;
+function login() {
+    let user = document.getElementById("user").value;
+    let pass = document.getElementById("pass").value;
 
-  let mail = "mailto:sowmyam757mail@gmail.com?subject=Contact Somya&body=Name: "
-             + name + "%0A" + msg;
-
-  window.location.href = mail;
+    if(user == "admin" && pass == "1234") {
+        document.getElementById("msg").innerText = "Login Success 🔥";
+    } else {
+        document.getElementById("msg").innerText = "Invalid Login ❌";
+    }
 }
 </script>
 
 </body>
 </html>
-
-
