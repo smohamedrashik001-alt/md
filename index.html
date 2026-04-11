@@ -5,104 +5,66 @@
 <title>Mohamed Rashik | Portfolio</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial;
-}
-
 body {
-  background: #0f172a;
-  color: white;
+  margin:0;
+  font-family: Arial;
+  background:#0f172a;
+  color:white;
 }
 
-/* NAVBAR */
 nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
-  background: black;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 40px;
+  background:black;
 }
 
 nav a {
-  color: cyan;
-  margin-left: 15px;
-  text-decoration: none;
+  color:cyan;
+  margin-left:15px;
+  text-decoration:none;
 }
 
-/* HERO */
 .hero {
-  text-align: center;
-  padding: 60px 20px;
+  text-align:center;
+  padding:60px;
 }
 
 .hero img {
-  width: 120px;
-  border-radius: 50%;
-  border: 3px solid cyan;
+  width:130px;
+  border-radius:50%;
+  border:3px solid cyan;
 }
 
-.hero h1 {
-  margin-top: 10px;
-  font-size: 32px;
-}
-
-.hero span {
-  color: cyan;
-}
-
-/* SECTION */
 .section {
-  padding: 40px;
-  text-align: center;
+  padding:40px;
+  text-align:center;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.btn {
+  background:cyan;
+  color:black;
+  padding:10px 15px;
+  border:none;
+  border-radius:5px;
+  margin-top:10px;
+  cursor:pointer;
+}
+
+input, textarea {
+  padding:10px;
+  margin:10px;
+  width:250px;
 }
 
 .card {
-  background: #1e293b;
-  margin: 10px;
-  padding: 20px;
-  width: 250px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  background: #334155;
-}
-
-/* BUTTON */
-.btn {
-  background: cyan;
-  color: black;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-/* CONTACT */
-input {
-  padding: 10px;
-  margin: 10px;
-  width: 200px;
-}
-
-footer {
-  background: black;
-  padding: 10px;
-  text-align: center;
+  background:#1e293b;
+  padding:20px;
+  margin:10px;
+  display:inline-block;
+  border-radius:10px;
 }
 </style>
-
 </head>
 
 <body>
@@ -120,10 +82,12 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
-  <img src="https://drive.google.com/file/d/16ubeTDOmvvvthVQAz6l84YY8-2jOOFdq/view?usp=drivesdk">
-  <h1>Hi, I'm <span>Mohamed Rashik</span></h1>
+  <img src="https://drive.google.com/file/d/1xk5rHqdU5BfPIwDL0UJHj0lX8O2ULh04/view?usp=drivesdk.jpg"> <!-- 👈 un photo file name -->
+  <h1>Hi I'm Mohamed Rashik</h1>
   <p>Web Developer 💻</p>
-  <a class="btn" href="resume.pdf" download>Download Resume</a>
+
+  <!-- RESUME DOWNLOAD -->
+  <a href="https://drive.google.com/file/d/1trPkJtbGoKHoXItIlAoJIdQmoDu3CB1X/view?usp=drivesdk.pdf" download class="btn">Download Resume</a>
 </div>
 
 <!-- ABOUT -->
@@ -135,49 +99,42 @@ footer {
 <!-- SKILLS -->
 <div class="section" id="skills">
   <h2>Skills</h2>
-  <div class="cards">
-    <div class="card">HTML</div>
-    <div class="card">CSS</div>
-    <div class="card">JavaScript</div>
-    <div class="card">Python</div>
-  </div>
+  <div class="card">HTML</div>
+  <div class="card">CSS</div>
+  <div class="card">JavaScript</div>
 </div>
 
 <!-- PROJECTS -->
 <div class="section" id="projects">
   <h2>Projects</h2>
-  <div class="cards">
-    <div class="card">AI-based Traffic Signal control System using image processing</div>
-  </div>
+  <div class="card">AI-Based Traffic Signal Control System using image processing</div>
 </div>
 
 <!-- CONTACT -->
-<div class="section" id="contact">
-  <h2>Contact</h2>
-  <input type="text" id="name" placeholder="Your Name"><br>
-  <button class="btn" onclick="send()">Send</button>
-  <p id="msg"></p>
+<div class="section" id="8754281925">
+  <h2>Contact Me</h2>
+
+  <input type="text" id="Name" placeholder="Your Name"><br>
+  <textarea id="message" placeholder="good"></textarea><br>
+
+  <!-- EMAIL SEND BUTTON -->
+  <button class="btn" onclick="rashikrashik316()">Send Mail</button>
 </div>
 
-<footer>
-  <p>© 2026 Mohamed Rashik</p>
-</footer>
-
 <script>
-function send() {
-  let name = document.getElementById("name").value;
-  if(name == "") {
-    alert("Enter name 😅");
-  } else {
-    document.getElementById("msg").innerText = "Thanks " + name + " 🔥";
-  }
+function sendMail() {
+  let name = document.getElementById("rashik").value;
+  let msg = document.getElementById("message").value;
+
+  let mail = "mailto:rashikrashik316mail@gmail.com?subject=Portfolio Contact&body=Name: " 
+             + name + "%0A" + msg;
+
+  window.location.href = mail;
 }
 </script>
 
 </body>
 </html>
-
-
 
 
 
