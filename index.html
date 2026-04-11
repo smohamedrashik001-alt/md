@@ -1,112 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mohamed Rashik</title>
+<meta charset="UTF-8">
+<title>Mohamed Rashik | Portfolio</title>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #0f172a;
-    color: white;
+  background: #0f172a;
+  color: white;
 }
 
 /* NAVBAR */
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
-    background: #020617;
-    position: sticky;
-    top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: black;
 }
 
 nav a {
-    color: cyan;
-    margin: 0 10px;
-    text-decoration: none;
+  color: cyan;
+  margin-left: 15px;
+  text-decoration: none;
 }
 
 /* HERO */
 .hero {
-    text-align: center;
-    padding: 60px 20px;
+  text-align: center;
+  padding: 60px 20px;
 }
 
 .hero img {
-    width: 130px;
-    border-radius: 50%;
-    border: 3px solid cyan;
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid cyan;
 }
 
 .hero h1 {
-    font-size: 40px;
+  margin-top: 10px;
+  font-size: 32px;
 }
 
 .hero span {
-    color: cyan;
-}
-
-/* TYPING EFFECT */
-.typing {
-    border-right: 2px solid cyan;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 4s steps(30) infinite alternate;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 220px }
+  color: cyan;
 }
 
 /* SECTION */
 .section {
-    padding: 40px;
-    text-align: center;
+  padding: 40px;
+  text-align: center;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* CARD */
 .card {
-    background: #1e293b;
-    margin: 15px;
-    padding: 20px;
-    width: 260px;
-    border-radius: 15px;
-    transition: 0.3s;
+  background: #1e293b;
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.05);
-    background: #334155;
+  transform: scale(1.05);
+  background: #334155;
 }
 
 /* BUTTON */
 .btn {
-    background: cyan;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+  background: cyan;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
 }
 
-.btn:hover {
-    background: white;
+/* CONTACT */
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
 }
 
-/* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
-    margin-top: 30px;
+  background: black;
+  padding: 10px;
+  text-align: center;
 }
 </style>
 
@@ -116,64 +109,75 @@ footer {
 
 <!-- NAVBAR -->
 <nav>
-    <h3>Rashik</h3>
-    <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
+  <h3>Rashik</h3>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-    <img src="yourphoto.jpg">
-    <h1>Hi, I'm <span>Mohamed Rashik</span></h1>
-    <h2 class="typing">Web Developer 💻</h2>
-    <br>
-    <a class="btn" href="resume.pdf" download>Download Resume</a>
+  <img src="https://drive.google.com/file/d/16ubeTDOmvvvthVQAz6l84YY8-2jOOFdq/view?usp=drivesdk">
+  <h1>Hi, I'm <span>Mohamed Rashik</span></h1>
+  <p>Web Developer 💻</p>
+  <a class="btn" href="resume.pdf" download>Download Resume</a>
 </div>
 
 <!-- ABOUT -->
 <div class="section" id="about">
-    <h2>About Me</h2>
-    <p>I am an ECE student passionate about Web Development and AI projects.</p>
+  <h2>About Me</h2>
+  <p>ECE student passionate about Web Development and AI projects.</p>
 </div>
 
 <!-- SKILLS -->
 <div class="section" id="skills">
-    <h2>Skills</h2>
-    <div class="cards">
-        <div class="card">HTML</div>
-        <div class="card">CSS</div>
-        <div class="card">JavaScript</div>
-        <div class="card">Python</div>
-    </div>
+  <h2>Skills</h2>
+  <div class="cards">
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">JavaScript</div>
+    <div class="card">Python</div>
+  </div>
 </div>
 
 <!-- PROJECTS -->
 <div class="section" id="projects">
-    <h2>Projects</h2>
-    <div class="cards">
-        <div class="card">AI-based Traffic Signal control system using image processing </div>
-        
-    </div>
+  <h2>Projects</h2>
+  <div class="cards">
+    <div class="card">AI-based Traffic Signal control System using image processing</div>
+  </div>
 </div>
 
 <!-- CONTACT -->
 <div class="section" id="contact">
-    <h2>Contact:8754281925</h2>
-    <p>Email: rashikrashik316@gmail.com</p>
-    <p>
-        <a href="#">LinkedIn</a> |
-        <a href="#">GitHub</a>
-    </p>
+  <h2>Contact</h2>
+  <input type="text" id="name" placeholder="Your Name"><br>
+  <button class="btn" onclick="send()">Send</button>
+  <p id="msg"></p>
 </div>
 
-<!-- FOOTER -->
 <footer>
-    <p>© 2026 Mohamed Rashik</p>
+  <p>© 2026 Mohamed Rashik</p>
 </footer>
+
+<script>
+function send() {
+  let name = document.getElementById("name").value;
+  if(name == "") {
+    alert("Enter name 😅");
+  } else {
+    document.getElementById("msg").innerText = "Thanks " + name + " 🔥";
+  }
+}
+</script>
 
 </body>
 </html>
+
+
+
+
+
